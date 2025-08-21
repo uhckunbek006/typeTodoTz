@@ -21,7 +21,6 @@ const Home = () => {
     } catch (err) {
       console.error("Ошибка загрузки данных:", err);
     }
-    CancelTodo;
   }
 
   console.log(todo);
@@ -44,6 +43,7 @@ const Home = () => {
     await axios.delete(
       `https://68916c9b447ff4f11fbc8524.mockapi.io/todo/Commenta/${item.id}`
     );
+    GetApi();
   }
 
   useEffect(() => {
