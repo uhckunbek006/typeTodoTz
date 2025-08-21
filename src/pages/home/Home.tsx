@@ -46,7 +46,6 @@ const Home = () => {
     );
   }
 
-  // Загрузка done из localStorage при монтировании
   useEffect(() => {
     const savedDone: Person[] = JSON.parse(
       localStorage.getItem("done") || "[]"
@@ -64,7 +63,9 @@ const Home = () => {
               <option value="">Select category</option>
             </select>
             <button onClick={GetApi}>Get</button>
-            <h3>Your Points: {done.length}</h3>
+            <h3>
+              Your Points: <span>{done.length}</span>
+            </h3>
           </div>
 
           <div className="home--todo">
